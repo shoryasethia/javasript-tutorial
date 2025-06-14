@@ -1,6 +1,6 @@
 // const coding = ["js", "ruby", "java", "python", "cpp"]
 
-
+// -----> forEach does not return a value, it just iterates over the array
 // const values = coding.forEach( (item) => {
 //     //console.log(item);
 //     return item
