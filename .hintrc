@@ -5,6 +5,7 @@
   "hints": {
     "no-inline-styles": "off",
     "button-type": "off",
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "highest-available-document-mode": "off"
   }
 }
