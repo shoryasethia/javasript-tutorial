@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Event Listener</title>
+</head>
+<body>
+  <div id="scrollBoxY" style="height: 200px; overflow-y: scroll; border: 2px solid black; text-align: center;">
+    <div style="height: 600px; padding-top: 300px;">
+      <span>scrollable vertical content</span>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div id="scrollBoxX" style="height: 100px; width: 300px; overflow-x: scroll; white-space: nowrap; border: 2px solid black; text-align: center;">
+    <div style="width: 1000px;">
+      <span style="display: inline-block; width: 1000px;">scrollable horizontal content</span>
+    </div>
+  </div>
+
+  <script>
+    let timeoutY, timeoutX;
+
+    scrollBoxY.addEventListener('scroll', () => {
+      scrollBoxY.style.backgroundColor = 'red';
+      clearTimeout(timeoutY);
+      timeoutY = setTimeout(() => {
+        scrollBoxY.style.backgroundColor = 'white';
+      }, 200);
+    });
+
+    scrollBoxX.addEventListener('scroll', () => {
+      scrollBoxX.style.backgroundColor = 'green';
+      clearTimeout(timeoutX);
+      timeoutX = setTimeout(() => {
+        scrollBoxX.style.backgroundColor = 'white';
+      }, 200);
+    });
+  </script>
+</body>
+</html>
